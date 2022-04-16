@@ -1,6 +1,8 @@
 <?php 
 include 'include/connect.php'; 
 include 'include/header.php'; 
+
+
 ?>
 <h1 class="h2">Dashboard</h1>
           </div>
@@ -44,7 +46,7 @@ include 'include/header.php';
                       </td>
                       <td>
                         <span class="btn-color badge rounded-pill">'.$status.'</span>
-                      </td>s
+                      </td>
                       <td>
                         <span class="btn-color badge rounded-pill">'.$priority.'</span>
                       </td>

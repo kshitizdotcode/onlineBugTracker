@@ -16,7 +16,7 @@ include 'include/header.php';
                   <th scope="col">STATUS</th>
                   <th scope="col">PRIORITY</th>
                   <th scope="col">ASSIGNED</th>
-                  <th scope="col">ETA(Hrs)</th>
+                  <th scope="col">ETA (Hrs)</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -60,7 +60,7 @@ include 'include/header.php';
                         type="button"
                         data-toggle="tooltip"
                         data-placement="top"
-                        title="Edit"
+                        title="Update"
                       >
                         <span data-feather="edit"></span>
                         </button>

@@ -20,5 +20,4 @@ btnColor.forEach((element) => {
   } else {
     element.classList.add("bg-secondary");
   }
-  console.log(element.textContent);
 });

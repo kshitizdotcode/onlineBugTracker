@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+  header("location: login.php");
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,16 +49,15 @@
           id="sidebarMenu"
           class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
         >
-          <div class="position-sticky pt-3">
+          <div class="position-sticky pt-4">
             <ul class="nav flex-column">
-            <!-- <div style="padding-left: 15px;">
-                <h3 class=" ">Hi, Kshitiz</h3>
+            <div style="padding-left: 20px;">
+                <h3 class=" ">HI, <?php echo strtoupper($_SESSION['name'])?></h3>
               </div>
-              <hr class="m-0"> -->
+              <hr class="m-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
-                  aria-current="page"
+                  class="nav-link"
                   href="dashboard.php"
                 >
                   <span class="mb-1" data-feather="home"></span>
@@ -70,7 +77,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.php">
+                <a class="nav-link" href="logout.php">
                   <span class="mb-1" data-feather="log-out"></span>
                   Log Out
                 </a>

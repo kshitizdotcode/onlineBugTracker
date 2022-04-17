@@ -16,7 +16,7 @@ include 'include/header.php';
                   <th scope="col">STATUS</th>
                   <th scope="col">PRIORITY</th>
                   <th scope="col">ASSIGNED</th>
-                  <th scope="col">ETA(Hrs)</th>
+                  <th scope="col">ETA (Hrs)</th>
                 </tr>
               </thead>
               <tbody>

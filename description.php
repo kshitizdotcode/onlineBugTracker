@@ -44,7 +44,7 @@ include 'include/connect.php';
                             </div>
                           </div>
                           <div class="">
-                          <span class="fw-bold">ETA(Hrs): </span>
+                          <span class="fw-bold">ETA (Hrs): </span>
                           <span class="">'.$eta.'</span>
                         </div>
                           <div class="mb-2">

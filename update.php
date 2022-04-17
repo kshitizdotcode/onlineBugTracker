@@ -1,14 +1,16 @@
 <?php
 include 'include/connect.php'; 
 include 'include/header.php';
-?>
-<?php 
-$updateid=11;
-// $updateid=$_GET['updateid'];
+ $updateid= null;
+ if (!empty($_GET['updateid'])) {
+  $updateid=$_GET['updateid'];
+ }
 
-if(isset($_POST["update"])){
-    $status=$_POST["status"];
-    $sql="UPDATE `bug` SET  bug.bug_status=$status WHERE bug.bug_id=$updateid";
+  if(isset($_POST['submit'])){
+  $status=$_POST['status'];
+      echo $status;
+      $updateid = $_POST['updateid'];
+    $sql="UPDATE bug SET  bug.bug_status=$status WHERE bug.bug_id=$updateid";
     $result=mysqli_query($con, $sql);
     if($result){
       echo "Data Updated successfully";
@@ -18,12 +20,15 @@ if(isset($_POST["update"])){
       die(mysqli_error($con));
 }
 }
+
+
 ?>
 <h1 class="h2">Update Bug</h1>
           </div>
           <div class="table-responsive">
             <form method="post" action="update.php">
               <div class="form-group mt-3">
+                <input type ="hidden" name="updateid" value="<?php echo $updateid; ?>"/>
                 <label for="exampleFormControlSelect2">Status</label>
                 <select name="status" class="form-select" id="exampleFormControlSelect2">
                 <option selected disabled>Choose...</option>  
@@ -33,7 +38,7 @@ if(isset($_POST["update"])){
                 </select>
               </div>
               <div class="form-group mt-3 mb-3">
-                <button type="submit" name="update" class="btn btn-success">Submit</button>
+                <button type="submit" name="submit" class="btn btn-success">Update</button>
               </div>
             </form>
           </div>

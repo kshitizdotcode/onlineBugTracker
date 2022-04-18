@@ -100,7 +100,7 @@ if(isset($_POST["submit"])){
                 </select>
               </div>
               <div class="form-group mt-3">
-                <label for="exampleFormControlSelect4">ETA (HRS)</label>
+                <label for="exampleFormControlSelect4">ETA (Hrs)</label>
                 <input type="text" class="form-control" id="exampleFormControlInput0" name="eta">
               
               </div>

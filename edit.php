@@ -75,7 +75,7 @@ include 'include/header.php';
                         data-placement="top"
                         title="Delete"
                       >
-                      <span data-feather="edit"></span>
+                      <span data-feather="trash-2"></span>
                       </button>
                     </a>
                     </li>

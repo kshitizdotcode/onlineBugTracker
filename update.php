@@ -30,7 +30,7 @@ include 'include/header.php';
               <div class="form-group mt-3">
                 <input type ="hidden" name="updateid" value="<?php echo $updateid; ?>"/>
                 <label for="exampleFormControlSelect2">Status</label>
-                <select name="status" class="form-select" id="exampleFormControlSelect2">
+                <select name="status" class="form-select" id="exampleFormControlSelect2" required>
                 <option selected disabled>Choose...</option>  
                 <option value="1">Open</option>
                   <option value="2">Solving</option>

@@ -38,13 +38,14 @@ if(isset($_POST["submit"])){
                   class="form-control"
                   id="exampleFormControlInput0"
                   name="title"
+                  required
                 />
               </div>
               <div class="form-group mt-3">
                 <label for="exampleFormControlInput0" class="form-label"
                   >Date</label
                 >
-                <input type="date" class="form-control" id="exampleFormControlInput0" name="date">
+                <input type="date" class="form-control" id="exampleFormControlInput0" name="date" required>
               </div>
               <!-- <div class="form-group mt-3">
                 <label for="exampleFormControlInput1">Bug ID</label>
@@ -68,13 +69,13 @@ if(isset($_POST["submit"])){
 
               <div class="form-group mt-3">
                 <label for="exampleFormControlSelect2">Status</label>
-                <select name="status" class="form-select" id="exampleFormControlSelect2">
+                <select name="status" class="form-select" id="exampleFormControlSelect2" required>
                   <option value="1" selected>Open</option>
                 </select>
               </div>
               <div class="form-group mt-3">
                 <label for="exampleFormControlSelect3">Priority</label>
-                <select name="priority" class="form-select" id="exampleFormControlSelect3">
+                <select name="priority" class="form-select" id="exampleFormControlSelect3" required>
                   <option selected disabled>Choose...</option>
                   <option value="1">High</option>
                   <option value="2">Medium</option>
@@ -83,7 +84,7 @@ if(isset($_POST["submit"])){
               </div>
               <div class="form-group mt-3">
                 <label for="exampleFormControlSelect4">Assigned</label>
-                <select name="assigned" class="form-select" id="exampleFormControlSelect4">
+                <select name="assigned" class="form-select" id="exampleFormControlSelect4" required>
                   <option selected disabled>Choose...</option>
                   <?php
                   $sql2="SELECT developer_id,developer_name FROM developer";
@@ -101,7 +102,7 @@ if(isset($_POST["submit"])){
               </div>
               <div class="form-group mt-3">
                 <label for="exampleFormControlSelect4">ETA (Hrs)</label>
-                <input type="text" class="form-control" id="exampleFormControlInput0" name="eta">
+                <input type="number" class="form-control" id="exampleFormControlInput0" name="eta" min="1" required>
               
               </div>
               <div class="form-group mt-3">
@@ -111,6 +112,7 @@ if(isset($_POST["submit"])){
                   id="exampleFormControlTextarea1"
                   rows="3"
                   name="desc"
+                  required
                 ></textarea>
               </div>
               <div class="form-group mt-3 mb-3">
